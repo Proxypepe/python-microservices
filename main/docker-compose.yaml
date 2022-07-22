@@ -1,12 +1,12 @@
 version: '3.9'
 services:
   backend:
-    container_name: admin_backend
+    container_name: main_backend
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8001:5000"
     volumes:
       - .:/app
     depends_on:
@@ -14,18 +14,18 @@ services:
         condition: service_healthy
 
   db:
-    container_name: admin_db
+    container_name: main_db
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: admin
+      MYSQL_DATABASE: main
       MYSQL_USER: user
       MYSQL_PASSWORD: user
       MYSQL_ROOT_PASSWORD: user
     volumes:
       - .dbdata:/var/lib/mysql
     ports:
-      - "33066:3306"
+      - "33067:3306"
     healthcheck:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       timeout: 20s
