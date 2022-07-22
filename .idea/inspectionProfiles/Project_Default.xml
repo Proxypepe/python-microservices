@@ -1,0 +1,41 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="578" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+          <option value="N813" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.__getitem__" />
+          <option value="PyQt5.QtWidgets.clicked.connect" />
+          <option value="PostScript.src.postscript_src.src" />
+          <option value="test.ClientReq.__config" />
+          <option value="client.ClientReq.__config" />
+          <option value="parsers.json_parser.JsonParser.__client" />
+          <option value="widgets.task_list.TasksList.client" />
+          <option value="client.ClientReq.__datastore" />
+          <option value="client.ClientReq.__username" />
+          <option value="src.client.ClientReq.__datastore" />
+          <option value="src.client.ClientReq.__date" />
+          <option value="src.client.ClientReq.__username" />
+          <option value="PyQt5.QtWidgets.buttonClicked.connect" />
+          <option value="src.room.current_player.take_card" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
