@@ -5,10 +5,23 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: 'python app.py'
     ports:
       - "8001:5000"
     volumes:
       - .:/app
+    environment:
+      SQLALCHEMY_DATABASE_URI: 'mysql://user:user@main_db/main'
+    depends_on:
+      db:
+        condition: service_healthy
+
+  queue:
+    container_name: main_queue
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'python consumer.py'
     depends_on:
       db:
         condition: service_healthy
